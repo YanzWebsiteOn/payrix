@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List Payment || Arix/Yanz</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            background-image: url("https://e1.pxfuel.com/desktop-wallpaper/367/440/desktop-wallpaper-anime-aesthetic-sunset-anime-afternoon.jpg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            background-size: cover;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('background-pattern.png') repeat;
+            opacity: 0.1;
+            z-index: -1;
+        }
+
+        .container {
+            text-align: center;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+            backdrop-filter: blur(8px);
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            width: 90%;
+            max-width: 400px;
+        }
+
+        .profile {
+            margin-bottom: 20px;
+        }
+
+        .profile img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        .profile h2 {
+            margin: 0;
+            font-size: 1.5em;
+            color: #f9f9f9;
+            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .profile p {
+            margin: 0;
+            font-size: 1em;
+            color: #dcdcdc;
+        }
+
+        .title {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #f9f9f9;
+            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .btn {
+            display: block;
+            margin: 15px auto;
+            padding: 12px 25px;
+            font-size: 1.1em;
+            color: #ffffff;
+            background: linear-gradient(45deg, #ff8a00, #e52e71);
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(229, 46, 113, 0.5);
+        }
+
+        .popup {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: none;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .popup-content {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            width: 90%;
+            max-width: 400px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            color: #ffffff;
+        }
+
+        .popup-content h3 {
+            margin-bottom: 15px;
+            color: #ffffff;
+            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .popup-content p {
+            margin-bottom: 15px;
+        }
+
+        .close-btn {
+            background: linear-gradient(45deg, #ff6a00, #ee0979);
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .close-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(238, 9, 121, 0.5);
+        }
+
+        img.qris {
+            width: 200px;
+            height: auto;
+            margin-top: 10px;
+            border-radius: 10px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        img.qris:hover {
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="background"></div>
+    <div class="container">
+        <div class="profile">
+            <img src="./image/arixlogoreal.png" alt="Logo">
+            <h2>ArixOfficial</h2>
+            <p>Menyediakan Berbagai Kebutuhan Hosting</p>
+        </div>
+        <h1 class="title">Payment Arix Official</h1>
+        <button class="btn" onclick="showPopup('dana')">Payment Dana</button>
+        <button class="btn" onclick="showPopup('gopay')">Payment Gopay</button>
+        <button class="btn" onclick="showPopup('qris')">Payment Qris All Pay</button>
+        <a href="https://wa.me/6288228895081" target="_blank" style="color: #9de0fc; text-decoration: none; font-weight: bold;">©ArixOfficial (©YanzOfficial)</a>
+    </div>
+
+    <div id="popup-dana" class="popup">
+        <div class="popup-content">
+            <h3>Payment Dana</h3>
+            <p>Jika Ingin Tf Menggunakan Nomor Dana:</p>
+            <p><strong>Dana : 088228895081</strong></p>
+            <p>Mohon Sertakan Bukti Tranfer Ke Owner Jika Ingin Buy</p>
+            <a href="https://wa.me/6288228895081" target="_blank" style="color: #ff3d33; text-decoration: none; font-weight: bold;">wa.me/6288228895081</a>
+            <button class="close-btn" onclick="closePopup('dana')">Close</button>
+        </div>
+    </div>
+
+    <div id="popup-gopay" class="popup">
+        <div class="popup-content">
+            <h3>Payment Gopay</h3>
+            <p>Jika Ingin Tf Menggunakan Nomor Gopay:</p>
+            <p><strong>Gopay : 088228895081</strong></p>
+            <p>Mohon Sertakan Bukti Tranfer Ke Owner Jika Ingin Buy</p>
+            <a href="https://wa.me/6288228895081" target="_blank" style="color: #ff3d33; text-decoration: none; font-weight: bold;">wa.me/6288228895081</a>
+            <button class="close-btn" onclick="closePopup('gopay')">Close</button>
+        </div>
+    </div>
+
+    <div id="popup-qris" class="popup">
+        <div class="popup-content">
+            <h3>Payment Qris</h3>
+            <p>Jika Ingin Tf Menggunakan Qris All Payment:</p>
+            <a href="https://files.catbox.moe/jaykyl.jpg" target="_blank">
+                <img src="https://files.catbox.moe/jaykyl.jpg" alt="QRIS" class="qris">
+            </a>
+            <p>Mohon Sertakan Bukti Tranfer Ke Owner Jika Ingin Buy, JIka Gambar Tidak Kelihatan, Bisa Klik Gambar Qris Tersebut!!</p>
+            <a href="https://wa.me/6288228895081" target="_blank" style="color: #ff3d33; text-decoration: none; font-weight: bold;">wa.me/6288228895081</a>
+            <button class="close-btn" onclick="closePopup('qris')">Close</button>
+        </div>
+    </div>
+
+    <script>
+        function showPopup(type) {
+            document.getElementById(`popup-${type}`).style.display = 'flex';
+        }
+
+        function closePopup(type) {
+            document.getElementById(`popup-${type}`).style.display = 'none';
+        }
+    </script>
+</body>
+</html>
